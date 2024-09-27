@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h2 class="mb-4">Créer un nouvel article</h2>
+        {{ form_start(form) }}
+        
+        <div class="form-group mb-3">
+            {{ form_row(form.title) }}
+        </div>
+
+        <div class="form-group mb-3">
+            {{ form_row(form.content) }}
+        </div>
+
+        <div class="form-group text-center">
+            {{ form_widget(form.save) }} <!-- This generates the submit button with defined classes -->
+        </div>
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
